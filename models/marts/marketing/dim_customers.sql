@@ -1,24 +1,12 @@
 with customers as (
 
-    --  select * from {{ ref('customer') }}
-    select 
-    C_CUSTKEY as customer_id,
-    C_NAME as customer_name
-    from 
-    snowflake_sample_data.tpch_sf10.customer
+     select * from {{ ref('customer') }}
 
 ),
 
 orders as ( 
 
-    -- select * from {{ ref('orders') }}
-    select 
-    O_ORDERKEY as order_id,
-    O_CUSTKEY as customer_id,
-    O_ORDERDATE as order_date,
-    O_ORDERSTATUS as status
-    from 
-    snowflake_sample_data.tpch_sf10.orders
+    select * from {{ ref('orders') }}
 
 ),
 
