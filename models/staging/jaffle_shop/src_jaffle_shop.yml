@@ -2,17 +2,21 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: a clone of snowflake_sample_data DB
     database: snowflake_sample_data
     schema: tpch_sf10
     tables:
       - name: customer
+        description: This is raw customers data
         columns:
           - name: C_CUSTKEY
+            description: primary key for the customers table
             tests:
               - unique
               - not_null
         freshness: null
       - name: orders
+        description: This is raw orders data
         columns:
           - name: O_ORDERKEY
             tests:
