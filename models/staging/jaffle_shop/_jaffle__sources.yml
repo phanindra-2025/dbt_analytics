@@ -6,4 +6,15 @@ sources:
     schema: tpch_sf10
     tables:
       - name: customer
+        freshness: null
       - name: orders
+        freshness: null
+      - name: LINEITEM
+        # freshness: 
+        #   error_after:
+        #     count: 50
+        #     period: year
+        #   warn_after:
+        #     count: 40
+        #     period: year
+        # loaded_at_field: i_receipt_date
