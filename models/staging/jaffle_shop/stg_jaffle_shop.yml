@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_jaffle__customer
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_jaffle__orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values: #["F","O","P"]
+              values: 
+                - F
+                - O
+                - P
