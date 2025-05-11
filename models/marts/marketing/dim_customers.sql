@@ -4,10 +4,10 @@
     )
 }}
 with customers as (
-    select * from {{ ref('customer') }}
+    select * from {{ ref('stg_jaffle__customer') }}
 ),
 orders as ( 
-    select * from {{ ref('orders') }}
+    select * from {{ ref('stg_jaffle__orders') }}
 ),
 customer_orders as (
     select

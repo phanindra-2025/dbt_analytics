@@ -5,4 +5,5 @@
     O_ORDERDATE as order_date,
     O_ORDERSTATUS as status
     from 
-    snowflake_sample_data.tpch_sf10.orders
+    -- snowflake_sample_data.tpch_sf10.orders
+    {{ source('jaffle_shop', 'orders') }}
