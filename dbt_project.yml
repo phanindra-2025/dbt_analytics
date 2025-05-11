@@ -39,7 +39,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   analytics_wshop:
     # Applies to all files under models/example/
-    marts:
-      materialized: table
-    staging:
-      materialized: view
+    # marts:
+    #   materialized: table
+    # staging:
+    #   materialized: view
