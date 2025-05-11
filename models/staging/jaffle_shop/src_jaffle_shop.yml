@@ -6,8 +6,18 @@ sources:
     schema: tpch_sf10
     tables:
       - name: customer
+        columns:
+          - name: C_CUSTKEY
+            tests:
+              - unique
+              - not_null
         freshness: null
       - name: orders
+        columns:
+          - name: O_ORDERKEY
+            tests:
+              - unique
+              - not_null      
         freshness: null
       - name: LINEITEM
         # freshness: 
