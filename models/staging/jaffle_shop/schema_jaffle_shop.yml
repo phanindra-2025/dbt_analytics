@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_jaffle__customer
+    description: Customer table from snowflake_sample_data and schema tpch_sf10
+    columns:
+      - name: customer_id
+        description: unique id for individual customer
+        tests:
+          - unique
+          - not_null
+  - name: stg_jaffle__orders
+    description: Orders table from snowflake_sample_data and schema tpch_sf10
+    columns:
+      - name: order_id
+        description: unique id for individual order made by customers
+        tests:
+          - unique
+          - not_null
+      - name: status
+        description: "{{doc('order_status')}}"
+        tests:
+          - accepted_values: #["F","O","P"]
+              values: 
+                - F
+                - O
+                - P
