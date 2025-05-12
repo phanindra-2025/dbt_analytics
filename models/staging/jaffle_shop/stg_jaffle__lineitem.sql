@@ -1,3 +1,0 @@
--- generating model for source('jaffle_shop', 'LINEITEM')...
-
-select * from {{ source('jaffle_shop', 'LINEITEM') }}
